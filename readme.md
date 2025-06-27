@@ -1,4 +1,4 @@
-## Objetivo
+## PT-BR: Objetivo
 
 Criar um carrinho de compras baseado no da Shopee, onde o carrinho armazena itens e faça o cálculo de sub-itens automaticamente.
 
@@ -7,3 +7,7 @@ Criar um carrinho de compras baseado no da Shopee, onde o carrinho armazena iten
 // as entidades representadas
 // carrinho = cart
 // itens
+
+## EN: Objective 
+
+Create a shopping cart based on Shopee's cart, which stores items and automatically calculates sub-totals

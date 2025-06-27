@@ -1,20 +1,20 @@
-// quais ações o carrinho pode fazer
+// which actions the cart can do
 
-// casos de uso
+// use cases
 
-// adicionar item no carrinho
+// add item in the cart
 async function addItem(userCart, item) {
   userCart.push(item);
 }
 
-// calcular o total
+// calculate total
 async function calculateTotal(userCart) {
   console.log("Shopee cart total");
   const result = userCart.reduce((total, item) => total + item.subtotal(), 0);
   console.log(`Total: ${result}`);
 }
 
-// deletar item do carrinho
+// delete item from cart
 async function deleteItem(userCart, name) {
   const index = userCart.findIndex((item) => item.name === name);
 
@@ -23,34 +23,34 @@ async function deleteItem(userCart, name) {
   }
 }
 
-// remover um item - diminui um item pelo index
+// remove an item - decreases an item by index
 async function removeItemByIndex(userCart, index) {
-  // transforma o indice visual do usuário para o indice do back-end
+  // transforms the user's visual index to the backend index
   const deleteIndex = index - 1;
 
-  // é maior do que zero e se é menor do que o tamanho do carrinho
+  // is greater than zero and if it is less than the cart size
   if (index >= 0 && index < userCart.length) {
     userCart.splice(deleteIndex, 1);
   }
 }
 
-// remover um item - diminui um item 
+// remove an item - decreases an item 
 async function removeItem(userCart, item) {
-  // 1 - encontrar o indice do item
+  // 1 - find the index of the item
   const indexFound = userCart.findIndex((p) => p.name === item.name);
 
-  // 2 - caso não encontre o item
+  // 2 - case not find the item
   if (indexFound === -1) {
     console.log("Index não encontrado");
     return;
   }
 
-  // 3 - item > 1 subtrair um item
+  // 3 - item > 1 subtract one item
   if (userCart[indexFound].quantity > 1) {
     userCart[indexFound].quantity -= 1;
   } 
 
-  // 4 - caso item = 1 deletar o item
+  // 4 - case item = 1 delete the item
   if (userCart[indexFound].quantity === 1) {
     userCart.splice(indexFound, 1);
   }
