@@ -13,6 +13,7 @@ Criar um carrinho de compras baseado no da Shopee, onde o carrinho armazena iten
 Create a shopping cart based on Shopee's cart, which stores items and automatically calculates sub-totals
 
 // application domain: shopping cart
+
 // represented entities 
 // cart
 // items
